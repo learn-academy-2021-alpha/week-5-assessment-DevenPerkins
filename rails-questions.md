@@ -28,7 +28,7 @@ Rails comes with a default SQL database, adding the flags `-d postgresql -T` wil
 
 4. What is the naming convention for generating a Rails model? What is the naming convention for the table that is generated with this command?
 
-The model is in Pascal case and the tables are plural and in snake_case
+The model is in Pascal case and singular The tables are plural and in snake_case
 
 5. A Rails application is going to have two models. One is called Library and one is called Book. A library will have many books and a book will belong to a library. Which model would contain the foreign key? What would the foreign key column be named?
 
@@ -36,3 +36,4 @@ Book will belong to Library and the book's foreign key column will be named Libr
 
 6. What is the schema file in a Rails application? Can you modify the schema directly? Why or why not?
 
+Rails creates the schema file for us and it represents the current shape of the database. It should not be modified directly because it will  cause issues with the data that was migrated and will then conflict with data in future migrations.
